@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sorteren in CSS</title>
+    <style>
+    #bl1:checked ~ #blok2 {
+		display:none;
+			}
+
+    #bl2:checked  ~ #blok1 {
+        display:none;
+    }
+
+    </style>
+</head>
+<body>
+    <p>Maak uw keuze:</p>
+    <input type="radio" id="bl1" name="blok" value="blok1"> Blok 1<br>
+    <input type="radio" id="bl2" name="blok" value="blok2"> Blok 2<br>
+    <input type="radio" id="blall"name="blok" value="alle" checked> Alle blokken
+    <br><br>
+    <div id="blok1">BLOK 1</div>
+    <div id="blok2">BLOK 2</div>
+
+</body>
+</html>
