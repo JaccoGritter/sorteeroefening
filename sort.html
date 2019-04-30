@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sorteren in CSS</title>
+    <title>Selecteren in CSS</title>
     <style>
     .record {
         display: none;
@@ -22,17 +22,41 @@
         display: block;
     }
 
+    #g1:checked ~ .genderm {
+		display: block;
+			}
+
+    #g2:checked ~ .genderf {
+        display: block;
+    }
+
+    #rbja:checked ~ .rbja {
+		display: block;
+	}
+
+    #rbnee:checked ~ .rbnee {
+		display: block;
+	}
+
     </style>
 
 </head>
 <body>
-    <p>Leeftijdsklasse:</p>
-    <input type="checkbox" id="lt1" name="blok" value="leeftijd1"> Leeftijd: kind (0-12)<br>
-    <input type="checkbox" id="lt2" name="blok" value="leeftijd2"> Leeftijd: volwassen (13-65)<br>
-    <input type="checkbox" id="lt3" name="blok" value="leeftijd3"> Leeftijd: 65+<br>
+    <p>Leeftijdsklasse</p>
+    <input type="checkbox" id="lt1" name="leeftijd1"> Leeftijd: kind (0-12)<br>
+    <input type="checkbox" id="lt2" name="leeftijd2"> Leeftijd: volwassen (13-65)<br>
+    <input type="checkbox" id="lt3" name="leeftijd3"> Leeftijd: 65+<br>
     
-    <br><br>
-    
+    <br>
+    <p>Geslacht</p>
+    <input type="checkbox" id="g1" name="man"> Man<br>
+    <input type="checkbox" id="g2" name="vrouw"> Vrouw<br>
+
+    <br>
+    <p>Rijbewijs</p>
+    <input type="checkbox" id="rbja" name="rbja"> Ja <br>
+    <input type="checkbox" id="rbnee" name="rbnee"> Nee <br>
+        
     <div class = "record age2 genderm rbja">
 
         <ul>
@@ -40,7 +64,7 @@
         <li>Leeftijd: 33</li>
         <li>Woonplaats: Groningen</li>
         <li>Geslacht: man</li>
-        <li>Rijbewijs: C</li>
+        <li>Rijbewijs: ja</li>
         </ul>
             
     </div>
@@ -53,31 +77,31 @@
         <li>Leeftijd: 13</li>
         <li>Woonplaats: Groningen</li>
         <li>Geslacht: man</li>
-        <li>Rijbewijs: -</li>
+        <li>Rijbewijs: nee</li>
         </ul>
 
     </div>
     
-    <div class = "record age3 genderv rbja">
+    <div class = "record age3 genderf rbja">
 
         <ul>
         <li><h2>Marjan</h2></li>
         <li>Leeftijd: 67</li>
         <li>Woonplaats: Leeuwarden</li>
         <li>Geslacht: vrouw</li>
-        <li>Rijbewijs: B</li>
+        <li>Rijbewijs: ja</li>
         </ul>
 
     </div>
 
-    <div class = "record age1 genderv rbnee">
+    <div class = "record age1 genderf rbnee">
 
         <ul>
         <li><h2>Loes</h2></li>
         <li>Leeftijd: 10</li>
         <li>Woonplaats: Assen</li>
         <li>Geslacht: vrouw</li>
-        <li>Rijbewijs: -</li>
+        <li>Rijbewijs: nee</li>
         </ul>
 
     </div>
