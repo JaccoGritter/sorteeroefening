@@ -6,24 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sorteren in CSS</title>
     <style>
-    #bl1:checked ~ #blok2 {
-		display:none;
+    .record {
+        display: none;
+    }
+
+    #lt1:checked ~ .age1 {
+		display: block;
 			}
 
-    #bl2:checked  ~ #blok1 {
-        display:none;
+    #lt2:checked ~ .age2 {
+        display: block;
+    }
+
+    #lt3:checked ~ .age3 {
+        display: block;
     }
 
     </style>
+
 </head>
 <body>
-    <p>Maak uw keuze:</p>
-    <input type="radio" id="bl1" name="blok" value="blok1"> Blok 1<br>
-    <input type="radio" id="bl2" name="blok" value="blok2"> Blok 2<br>
-    <input type="radio" id="blall"name="blok" value="alle" checked> Alle blokken
+    <p>Leeftijdsklasse:</p>
+    <input type="checkbox" id="lt1" name="blok" value="leeftijd1"> Leeftijd: kind (0-12)<br>
+    <input type="checkbox" id="lt2" name="blok" value="leeftijd2"> Leeftijd: volwassen (13-65)<br>
+    <input type="checkbox" id="lt3" name="blok" value="leeftijd3"> Leeftijd: 65+<br>
+    
     <br><br>
-    <div id="blok1">BLOK 1</div>
-    <div id="blok2">BLOK 2</div>
+    
+    <div class = "record age2 genderm rbja">
+
+        <ul>
+        <li><h2>Joop</h2></li>
+        <li>Leeftijd: 33</li>
+        <li>Woonplaats: Groningen</li>
+        <li>Geslacht: man</li>
+        <li>Rijbewijs: C</li>
+        </ul>
+            
+    </div>
+
+
+    <div class = "record age2 genderm rbnee">
+
+        <ul>
+        <li><h2>Henkie</h2></li>
+        <li>Leeftijd: 13</li>
+        <li>Woonplaats: Groningen</li>
+        <li>Geslacht: man</li>
+        <li>Rijbewijs: -</li>
+        </ul>
+
+    </div>
+    
+    <div class = "record age3 genderv rbja">
+
+        <ul>
+        <li><h2>Marjan</h2></li>
+        <li>Leeftijd: 67</li>
+        <li>Woonplaats: Leeuwarden</li>
+        <li>Geslacht: vrouw</li>
+        <li>Rijbewijs: B</li>
+        </ul>
+
+    </div>
+
+    <div class = "record age1 genderv rbnee">
+
+        <ul>
+        <li><h2>Loes</h2></li>
+        <li>Leeftijd: 10</li>
+        <li>Woonplaats: Assen</li>
+        <li>Geslacht: vrouw</li>
+        <li>Rijbewijs: -</li>
+        </ul>
+
+    </div>
 
 </body>
 </html>
