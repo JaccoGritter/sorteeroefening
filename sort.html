@@ -14,6 +14,11 @@
         display: flex;
     }
 
+    .records {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .ltbutton {
         width: 15em;
         height: 1.5em;
@@ -77,11 +82,12 @@
 <body>
 
     <div class="flexcontainer">
+
         <div id="keuzeblok">    
             <p>Leeftijdsklasse</p>
-            <div class="ltbutton buttonkleur" id="lt1">Leeftijd: kind (0-12)</div>
-            <div class="ltbutton buttonkleur" id="lt2">Leeftijd: volwassen (13-65)</div>
-            <div class="ltbutton buttonkleur" id="lt3">Leeftijd: 65+</div>
+            <div class="ltbutton buttonkleur" id="lt1">Kind (0-12)</div>
+            <div class="ltbutton buttonkleur" id="lt2">Volwassen (13-65)</div>
+            <div class="ltbutton buttonkleur" id="lt3">65+</div>
                 
             <p>Geslacht</p>
             <div class="ltbutton buttonkleur" id="g1">Man</div>
