@@ -18,11 +18,15 @@ Titel van de pagina veranderd naar "Selecteren in CSS", het is geen sorteren..
 
 
 *** 1-5
-Met de CSS selectors krijg ik het niet in een grid of flexbox. Dus omgebouwd naar jQuery.
+Met de CSS selectors krijg ik het niet in een grid of flexbox. Dus omgebouwd naar jQuery. Dit was nieuw voor me dus eerst op Free Code Camp de cursus gedaan.
 
 Titel van de pagina veranderd in "Selecteren in jQuery".
 
 Records toegevoegd. Voor de overzichtelijkheid een flexbox gemaakt.
+
+De records werden bij het laden van de webpagina allemaal getoond. Met de selectiebuttons zette je records uit (hide).
+Dit heb ik omgedraaid, dat is intuïtiever. Dus geen records zichtbaar bij het laden van de pagina, de selectie bepaalt wat zichtbaar is.
+
 
 Nog te doen:
 

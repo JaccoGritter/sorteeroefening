@@ -17,13 +17,13 @@
     .ltbutton {
         width: 15em;
         height: 1.5em;
-        background-color: rgb(220, 220, 220);
+        background-color:greenyellow;
         margin: 4px;
         padding: 5px;
     }
 
     .buttonkleur {
-        background-color:greenyellow;
+        background-color:rgb(220, 220, 220);
     }
 
 
@@ -31,6 +31,8 @@
 
 <script>
     $(document).ready(function(){
+
+        $(".record").hide();
 
         $("#lt1").click(function(){
             $(".age1").toggle();
@@ -71,6 +73,7 @@
     </script>
 
 </head>
+
 <body>
 
     <div class="flexcontainer">
