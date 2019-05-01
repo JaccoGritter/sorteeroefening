@@ -10,25 +10,60 @@
 
     <style>
 
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(202, 202, 247);
+    }
+
     .flexcontainer {
         display: flex;
+    }
+
+    #keuzeblok {
+        margin: 0.5em;
     }
 
     .records {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 0.3em;
+        margin-left: 2em;
+    }
+
+    .record {
+        background-color: rgb(223, 223, 245);
+        width: 14em;
+        height: 12em;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    .kopje {
+        font-style:italic;
+        font-weight: bold;
+        width: 15em;
+        height: 1.8em;
+        padding: 1em 0.5em 0 0.5em;
+        background-color:rgb(233, 233, 247);
+        margin: 0.3em;
+        
     }
 
     .ltbutton {
         width: 15em;
         height: 1.5em;
         background-color:greenyellow;
-        margin: 4px;
-        padding: 5px;
+        margin: 0.3em;
+        padding: 0.5em;
     }
 
     .buttonkleur {
         background-color:rgb(220, 220, 220);
+    }
+
+    ul {
+        list-style-type:none;
+        padding: 0.5em;
     }
 
 
@@ -84,16 +119,16 @@
     <div class="flexcontainer">
 
         <div id="keuzeblok">    
-            <p>Leeftijdsklasse</p>
+            <div class="kopje">Leeftijdsklasse</div>
             <div class="ltbutton buttonkleur" id="lt1">Kind (0-12)</div>
             <div class="ltbutton buttonkleur" id="lt2">Volwassen (13-65)</div>
             <div class="ltbutton buttonkleur" id="lt3">65+</div>
                 
-            <p>Geslacht</p>
+            <div class="kopje">Geslacht</div>
             <div class="ltbutton buttonkleur" id="g1">Man</div>
             <div class="ltbutton buttonkleur" id="g2">Vrouw</div>
             
-            <p>Rijbewijs</p>
+            <div class="kopje">Rijbewijs</div>
             <div class="ltbutton buttonkleur" id="rbja">Ja</div>
             <div class="ltbutton buttonkleur" id="rbnee">Nee</div>
             
