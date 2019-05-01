@@ -4,107 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Selecteren in CSS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <style>
-    .record {
-        display: none;
+
+    .ltbutton {
+        width: 15em;
+        height: 1.5em;
+        background-color: rgb(220, 220, 220);
+        margin: 4px;
+        padding: 5px;
     }
 
-    #lt1:checked ~ .age1 {
-		display: block;
-			}
-
-    #lt2:checked ~ .age2 {
-        display: block;
+    .buttonkleur {
+        background-color:greenyellow;
     }
 
-    #lt3:checked ~ .age3 {
-        display: block;
-    }
-
-    #g1:checked ~ .genderm {
-		display: block;
-			}
-
-    #g2:checked ~ .genderf {
-        display: block;
-    }
-
-    #rbja:checked ~ .rbja {
-		display: block;
-	}
-
-    #rbnee:checked ~ .rbnee {
-		display: block;
-	}
 
     </style>
 
+<script>
+    $(document).ready(function(){
+
+        $("#lt1").click(function(){
+            $(".age1").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#lt2").click(function(){
+            $(".age2").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#lt3").click(function(){
+            $(".age3").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#g1").click(function(){
+            $(".genderm").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#g2").click(function(){
+            $(".genderf").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#rbja").click(function(){
+            $(".rbja").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+        $("#rbnee").click(function(){
+            $(".rbnee").toggle();
+            $(this).toggleClass("buttonkleur");
+        });
+
+    });
+    </script>
+
 </head>
 <body>
-    <p>Leeftijdsklasse</p>
-    <input type="checkbox" id="lt1" name="leeftijd1"> Leeftijd: kind (0-12)<br>
-    <input type="checkbox" id="lt2" name="leeftijd2"> Leeftijd: volwassen (13-65)<br>
-    <input type="checkbox" id="lt3" name="leeftijd3"> Leeftijd: 65+<br>
-    
-    <br>
-    <p>Geslacht</p>
-    <input type="checkbox" id="g1" name="man"> Man<br>
-    <input type="checkbox" id="g2" name="vrouw"> Vrouw<br>
 
-    <br>
-    <p>Rijbewijs</p>
-    <input type="checkbox" id="rbja" name="rbja"> Ja <br>
-    <input type="checkbox" id="rbnee" name="rbnee"> Nee <br>
+    <!-- <div keuzeblok>     -->
+        <p>Leeftijdsklasse</p>
+        <div class="ltbutton buttonkleur" id="lt1">Leeftijd: kind (0-12)</div>
+        <div class="ltbutton buttonkleur" id="lt2">Leeftijd: volwassen (13-65)</div>
+        <div class="ltbutton buttonkleur" id="lt3">Leeftijd: 65+</div>
+               
+        <p>Geslacht</p>
+        <div class="ltbutton buttonkleur" id="g1">Man</div>
+        <div class="ltbutton buttonkleur" id="g2">Vrouw</div>
         
-    <div class = "record age2 genderm rbja">
-
-        <ul>
-        <li><h2>Joop</h2></li>
-        <li>Leeftijd: 33</li>
-        <li>Woonplaats: Groningen</li>
-        <li>Geslacht: man</li>
-        <li>Rijbewijs: ja</li>
-        </ul>
-            
-    </div>
-
-
-    <div class = "record age2 genderm rbnee">
-
-        <ul>
-        <li><h2>Henkie</h2></li>
-        <li>Leeftijd: 13</li>
-        <li>Woonplaats: Groningen</li>
-        <li>Geslacht: man</li>
-        <li>Rijbewijs: nee</li>
-        </ul>
-
-    </div>
+        <p>Rijbewijs</p>
+        <div class="ltbutton buttonkleur" id="rbja">Ja</div>
+        <div class="ltbutton buttonkleur" id="rbnee">Nee</div>
+        
+        
+    <!-- </div>    -->
     
-    <div class = "record age3 genderf rbja">
+        <div class = "record age2 genderm rbja">
 
-        <ul>
-        <li><h2>Marjan</h2></li>
-        <li>Leeftijd: 67</li>
-        <li>Woonplaats: Leeuwarden</li>
-        <li>Geslacht: vrouw</li>
-        <li>Rijbewijs: ja</li>
-        </ul>
+            <ul>
+            <li><h2>Joop</h2></li>
+            <li>Leeftijd: 33</li>
+            <li>Woonplaats: Groningen</li>
+            <li>Geslacht: man</li>
+            <li>Rijbewijs: ja</li>
+            </ul>
+                
+        </div>
 
-    </div>
 
-    <div class = "record age1 genderf rbnee">
+        <div class = "record age2 genderm rbnee">
 
-        <ul>
-        <li><h2>Loes</h2></li>
-        <li>Leeftijd: 10</li>
-        <li>Woonplaats: Assen</li>
-        <li>Geslacht: vrouw</li>
-        <li>Rijbewijs: nee</li>
-        </ul>
+            <ul>
+            <li><h2>Henkie</h2></li>
+            <li>Leeftijd: 13</li>
+            <li>Woonplaats: Groningen</li>
+            <li>Geslacht: man</li>
+            <li>Rijbewijs: nee</li>
+            </ul>
 
-    </div>
+        </div>
+        
+        <div class = "record age3 genderf rbja">
+
+            <ul>
+            <li><h2>Marjan</h2></li>
+            <li>Leeftijd: 67</li>
+            <li>Woonplaats: Leeuwarden</li>
+            <li>Geslacht: vrouw</li>
+            <li>Rijbewijs: ja</li>
+            </ul>
+
+        </div>
+        
+        <div class = "record age1 genderf rbnee">
+
+            <ul>
+            <li><h2>Loes</h2></li>
+            <li>Leeftijd: 10</li>
+            <li>Woonplaats: Assen</li>
+            <li>Geslacht: vrouw</li>
+            <li>Rijbewijs: nee</li>
+            </ul>
+        </div>
+    
+    
+
 
 </body>
 </html>
