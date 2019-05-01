@@ -22,6 +22,8 @@ Met de CSS selectors krijg ik het niet in een grid of flexbox. Dus omgebouwd naa
 
 Titel van de pagina veranderd in "Selecteren in jQuery".
 
+Records toegevoegd. Voor de overzichtelijkheid een flexbox gemaakt.
+
 Nog te doen:
 
 - opmaak - alles in een grid zetten. Keuzes (selecties) links, records rechts. 

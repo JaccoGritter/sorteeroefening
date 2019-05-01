@@ -10,6 +10,10 @@
 
     <style>
 
+    .flexcontainer {
+        display: flex;
+    }
+
     .ltbutton {
         width: 15em;
         height: 1.5em;
@@ -69,73 +73,113 @@
 </head>
 <body>
 
-    <!-- <div keuzeblok>     -->
-        <p>Leeftijdsklasse</p>
-        <div class="ltbutton buttonkleur" id="lt1">Leeftijd: kind (0-12)</div>
-        <div class="ltbutton buttonkleur" id="lt2">Leeftijd: volwassen (13-65)</div>
-        <div class="ltbutton buttonkleur" id="lt3">Leeftijd: 65+</div>
-               
-        <p>Geslacht</p>
-        <div class="ltbutton buttonkleur" id="g1">Man</div>
-        <div class="ltbutton buttonkleur" id="g2">Vrouw</div>
-        
-        <p>Rijbewijs</p>
-        <div class="ltbutton buttonkleur" id="rbja">Ja</div>
-        <div class="ltbutton buttonkleur" id="rbnee">Nee</div>
-        
-        
-    <!-- </div>    -->
-    
-        <div class = "record age2 genderm rbja">
-
-            <ul>
-            <li><h2>Joop</h2></li>
-            <li>Leeftijd: 33</li>
-            <li>Woonplaats: Groningen</li>
-            <li>Geslacht: man</li>
-            <li>Rijbewijs: ja</li>
-            </ul>
+    <div class="flexcontainer">
+        <div id="keuzeblok">    
+            <p>Leeftijdsklasse</p>
+            <div class="ltbutton buttonkleur" id="lt1">Leeftijd: kind (0-12)</div>
+            <div class="ltbutton buttonkleur" id="lt2">Leeftijd: volwassen (13-65)</div>
+            <div class="ltbutton buttonkleur" id="lt3">Leeftijd: 65+</div>
                 
-        </div>
-
-
-        <div class = "record age2 genderm rbnee">
-
-            <ul>
-            <li><h2>Henkie</h2></li>
-            <li>Leeftijd: 13</li>
-            <li>Woonplaats: Groningen</li>
-            <li>Geslacht: man</li>
-            <li>Rijbewijs: nee</li>
-            </ul>
-
-        </div>
-        
-        <div class = "record age3 genderf rbja">
-
-            <ul>
-            <li><h2>Marjan</h2></li>
-            <li>Leeftijd: 67</li>
-            <li>Woonplaats: Leeuwarden</li>
-            <li>Geslacht: vrouw</li>
-            <li>Rijbewijs: ja</li>
-            </ul>
-
-        </div>
-        
-        <div class = "record age1 genderf rbnee">
-
-            <ul>
-            <li><h2>Loes</h2></li>
-            <li>Leeftijd: 10</li>
-            <li>Woonplaats: Assen</li>
-            <li>Geslacht: vrouw</li>
-            <li>Rijbewijs: nee</li>
-            </ul>
-        </div>
-    
+            <p>Geslacht</p>
+            <div class="ltbutton buttonkleur" id="g1">Man</div>
+            <div class="ltbutton buttonkleur" id="g2">Vrouw</div>
+            
+            <p>Rijbewijs</p>
+            <div class="ltbutton buttonkleur" id="rbja">Ja</div>
+            <div class="ltbutton buttonkleur" id="rbnee">Nee</div>
+            
+        </div>  
+        <!-- einde keuzeblok -->
     
 
+        <div class="records">
+    
+            <div class = "record age2 genderm rbja">
+                <ul>
+                <li><h2>Joop</h2></li>
+                <li>Leeftijd: 33</li>
+                <li>Woonplaats: Groningen</li>
+                <li>Geslacht: man</li>
+                <li>Rijbewijs: ja</li>
+                </ul>                  
+            </div>
+
+
+            <div class = "record age2 genderm rbnee">
+                <ul>
+                <li><h2>Henkie</h2></li>
+                <li>Leeftijd: 13</li>
+                <li>Woonplaats: Groningen</li>
+                <li>Geslacht: man</li>
+                <li>Rijbewijs: nee</li>
+                </ul>
+            </div>
+            
+            <div class = "record age3 genderf rbja">
+                <ul>
+                <li><h2>Marjan</h2></li>
+                <li>Leeftijd: 67</li>
+                <li>Woonplaats: Leeuwarden</li>
+                <li>Geslacht: vrouw</li>
+                <li>Rijbewijs: ja</li>
+                </ul>
+            </div>
+            
+            <div class = "record age1 genderf rbnee">
+                <ul>
+                <li><h2>Loes</h2></li>
+                <li>Leeftijd: 10</li>
+                <li>Woonplaats: Assen</li>
+                <li>Geslacht: vrouw</li>
+                <li>Rijbewijs: nee</li>
+                </ul>
+            </div>
+
+            <div class = "record age2 genderm rbnee">
+                <ul>
+                <li><h2>Gerard</h2></li>
+                <li>Leeftijd: 24</li>
+                <li>Woonplaats: Zoetermeer</li>
+                <li>Geslacht: man</li>
+                <li>Rijbewijs: nee</li>
+                </ul>
+            </div>
+
+            <div class = "record age3 genderm rbja">
+                <ul>
+                <li><h2>Willem</h2></li>
+                <li>Leeftijd: 89</li>
+                <li>Woonplaats: Sneek</li>
+                <li>Geslacht: man</li>
+                <li>Rijbewijs: ja</li>
+                </ul>
+            </div>
+
+            <div class = "record age2 genderf rbja">
+                <ul>
+                <li><h2>Heleen</h2></li>
+                <li>Leeftijd: 44</li>
+                <li>Woonplaats: Bedum</li>
+                <li>Geslacht: vrouw</li>
+                <li>Rijbewijs: ja</li>
+                </ul>
+            </div>
+
+            <div class = "record age1 genderf rbnee">
+                <ul>
+                <li><h2>Miranda</h2></li>
+                <li>Leeftijd: 4</li>
+                <li>Woonplaats: Coevorden</li>
+                <li>Geslacht: vrouw</li>
+                <li>Rijbewijs: nee</li>
+                </ul>
+            </div>
+
+        </div>  
+        <!-- einde records -->
+
+    </div>
+    <!-- einde flexcontainer -->
 
 </body>
 </html>
