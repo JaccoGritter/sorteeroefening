@@ -27,8 +27,7 @@ Records toegevoegd. Voor de overzichtelijkheid een flexbox gemaakt.
 De records werden bij het laden van de webpagina allemaal getoond. Met de selectiebuttons zette je records uit (hide).
 Dit heb ik omgedraaid, dat is intuïtiever. Dus geen records zichtbaar bij het laden van de pagina, de selectie bepaalt wat zichtbaar is.
 
+Records in een grid geplaatst. Opmaak ook verder uitgebreid.
 
-Nog te doen:
-
-- opmaak - alles in een grid zetten. Keuzes (selecties) links, records rechts. 
+TO DO:
 - selectieresultaten zijn niet hoe ik het eigenlijk wil hebben. De geselcteerde records zouden eigenlijk moeten voldoen aan alle criterea.
