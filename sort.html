@@ -23,7 +23,7 @@
         margin: 0.5em;
     }
 
-    .records {
+    #records {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding-top: 0.3em;
@@ -70,43 +70,103 @@
 
 <script>
     $(document).ready(function(){
+        
+        // bepaal het aantal records
+        var numOfRecords = $("#records div").length;
 
+        // creeer per criterium (7) een array met voor elke persoon of ze aan het criterium voldoen of niet
+        var criterium = [[],[],[],[],[],[],[]];
+
+        for (var i=0; i<numOfRecords; i++ ){
+            criterium[0].push( $("#records div:nth-child("+(i+1)+")").hasClass("age1") );
+            criterium[1].push( $("#records div:nth-child("+(i+1)+")").hasClass("age2") );
+            criterium[2].push( $("#records div:nth-child("+(i+1)+")").hasClass("age3") );
+            criterium[3].push( $("#records div:nth-child("+(i+1)+")").hasClass("genderm") );
+            criterium[4].push( $("#records div:nth-child("+(i+1)+")").hasClass("genderf") );
+            criterium[5].push( $("#records div:nth-child("+(i+1)+")").hasClass("rbja") );
+            criterium[6].push( $("#records div:nth-child("+(i+1)+")").hasClass("rbnee") );
+        }
+ 
+        // houd bij of de knop voor een criterium aan staat of niet. Zet alle buttons in eerste instantie uit.
+        var buttonOn = new Array(7);
+        buttonOn.fill(false, 0, 7);
+
+        // toon de records nog niet
         $(".record").hide();
 
+        // functionaliteit voor de 7 keuzebuttons
+
         $("#lt1").click(function(){
-            $(".age1").toggle();
+            buttonOn[0] = !buttonOn[0];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#lt2").click(function(){
-            $(".age2").toggle();
+            buttonOn[1] = !buttonOn[1];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#lt3").click(function(){
-            $(".age3").toggle();
+            buttonOn[2] = !buttonOn[2];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#g1").click(function(){
-            $(".genderm").toggle();
+            buttonOn[3] = !buttonOn[3];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#g2").click(function(){
-            $(".genderf").toggle();
+            buttonOn[4] = !buttonOn[4];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#rbja").click(function(){
-            $(".rbja").toggle();
+            buttonOn[5] = !buttonOn[5];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
 
         $("#rbnee").click(function(){
-            $(".rbnee").toggle();
+            buttonOn[6] = !buttonOn[6];
             $(this).toggleClass("buttonkleur");
+            showRecords();
         });
+
+        function showRecords() {
+            
+            // zet eerst alles uit
+            $(".record").hide();
+
+            // loop door de 7 criteria PER BLOK
+            for (var i = 0; i < numOfRecords ; i++){
+
+                var selectie1 = false;
+                var selectie2 = false;
+                var selectie3 = false;
+
+                // check selectie 1 (leeftijd)
+                if ( (buttonOn[0] == true && criterium [0][i] == true) || (buttonOn[1] == true && criterium[1][i]==true) || (buttonOn[2] == true && criterium[2][i]==true) ) selectie1 = true;
+
+                // check selectie 2 (geslacht)
+                if ( (buttonOn[3] == true && criterium [3][i] == true) || (buttonOn[4] == true && criterium[4][i] == true) ) selectie2 = true;
+
+                // check selectie 3 (rijbewijs)
+                if ( (buttonOn[5] == true && criterium [5][i] == true) || (buttonOn[6] == true && criterium[6][i] == true) ) selectie3 = true;
+               
+                // wordt in iedere selectie aan minimaal 1 criterium voldaan, dan record tonen
+                if (selectie1 == true && selectie2 == true && selectie3 == true) {
+                    $("#records div:nth-child("+(i+1)+")").show();
+                    } 
+            }
+
+
+        }
 
     });
     </script>
@@ -135,7 +195,7 @@
         <!-- einde keuzeblok -->
     
 
-        <div class="records">
+        <div id="records">
     
             <div class = "record age2 genderm rbja">
                 <ul>
