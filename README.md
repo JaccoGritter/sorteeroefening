@@ -29,5 +29,6 @@ Dit heb ik omgedraaid, dat is intuïtiever. Dus geen records zichtbaar bij het l
 
 Records in een grid geplaatst. Opmaak ook verder uitgebreid.
 
-TO DO:
-- selectieresultaten zijn niet hoe ik het eigenlijk wil hebben. De geselcteerde records zouden eigenlijk moeten voldoen aan alle criterea.
+*** 2-5
+Selecteren werkt nu zoals het moet!
+Code geschreven in JavaScript en jQuery.
